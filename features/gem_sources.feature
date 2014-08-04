@@ -7,5 +7,5 @@ Feature: gem sources
       """
       *** CURRENT SOURCES ***
 
-      https://rubygems.org/
+https://ruby.taobao.org/
       """
