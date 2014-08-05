@@ -9,4 +9,11 @@ Feature: cucumber
       """
       1.3.16
       """
+      
+	Scenario:  aruba installed
+	When I run `gem list aruba`
+    Then the output should contain:
+      """
+      aruba
+      """
 
