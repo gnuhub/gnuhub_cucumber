@@ -17,3 +17,16 @@ Feature: cucumber
       aruba
       """
 
+    Scenario:  aruba Pygments
+    When I run `pip install Pygments`
+    Then the output should contain:
+      """
+      already satisfied
+      """
+
+    Scenario:  aruba rdiscount
+    When I run `gem list rdiscount`
+    Then the output should contain:
+      """
+      rdiscount (2
+      """
