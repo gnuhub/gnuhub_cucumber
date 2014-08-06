@@ -36,8 +36,21 @@ Feature: ansible
       I want to install the role eduardodeoh.ruby
       ansible-galaxy install eduardodeoh.ruby
 
-      When I run `ansible\-galaxy list`
+      When I run `ansible-galaxy list`
       Then the output should contain:
       """
       eduardodeoh.ruby
+      """
+
+    Scenario: ansible.git
+
+      In order to install git using ansible
+      As a developer using ansible
+      I want to install role Ansibles.git
+      ansible-galaxy install Ansibles.git
+
+      When I run `ansible-galaxy list`
+      Then the output should contain:
+      """
+      Ansibles.git
       """
