@@ -27,3 +27,17 @@ Feature: ansible
     the inventory host file is /usr/local/etc/ansible/hosts
 
     Then a file named "/usr/local/etc/ansible/hosts" should exist
+
+
+    Scenario: ansible.ruby
+
+      In order to install ruby using ansible
+      As a developer using ansible
+      I want to install the role eduardodeoh.ruby
+      ansible-galaxy install eduardodeoh.ruby
+
+      When I run `ansible\-galaxy list`
+      Then the output should contain:
+      """
+      eduardodeoh.ruby
+      """
