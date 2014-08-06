@@ -54,3 +54,16 @@ Feature: ansible
       """
       Ansibles.git
       """
+
+    Scenario: Ansibles.build-essential
+
+      In order to fix cannot find role Ansibles.build-essential
+      As a developer using ansible
+      I want to install Ansibles.build-essential
+      ansible-galaxy install Ansibles.build-essential
+
+      When I run `ansible-galaxy list`
+      Then the output should contain:
+      """
+      Ansibles.build-essential
+      """
