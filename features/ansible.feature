@@ -67,3 +67,15 @@ Feature: ansible
       """
       Ansibles.build-essential
       """
+    Scenario: Ansibles.python
+
+    In order to generate aruba report using Pygments
+    As a developer using python
+    I want to install Ansibles.python role
+    ansible-galaxy install Ansibles.python
+
+    When I run `ansible-galaxy list`
+    Then the output should contain:
+    """
+    Ansibles.python
+    """
