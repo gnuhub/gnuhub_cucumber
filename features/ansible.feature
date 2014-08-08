@@ -79,3 +79,16 @@ Feature: ansible
     """
     Ansibles.python
     """
+
+    Scenario: Ansibles.oracle-jdk
+
+    In order to install oracle-jdk
+    As a developer using java
+    I want to install Ansibles.oracle-jdk role on my mac
+    ansible-galaxy install Ansibles.oracle-jdk
+
+    When I run `ansible-galaxy list`
+    Then the output should contain:
+    """
+    Ansibles.oracle-jdk
+    """
