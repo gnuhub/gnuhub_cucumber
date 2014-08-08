@@ -92,3 +92,16 @@ Feature: ansible
     """
     Ansibles.oracle-jdk
     """
+
+    Scenario: robdyke.ant
+
+    In order to install ant
+    As a developer using ansible
+    I want to install robdyke.ant on my mac
+    ansible-galaxy install robdyke.ant
+
+    When I run `ansible-galaxy list`
+    Then the output should contain:
+    """
+    robdyke.ant
+    """
